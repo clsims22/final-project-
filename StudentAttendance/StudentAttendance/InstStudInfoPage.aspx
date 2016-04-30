@@ -21,10 +21,6 @@
         <br />
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Student Roll Number"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="rollNoTbox" runat="server" Width="140px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label3" runat="server" Text="Student Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="stuNmTbox" runat="server" Width="180px"></asp:TextBox>
@@ -62,7 +58,7 @@
         <br />
         <br />
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="addStuBtn" runat="server" Text="Add Student" />
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="updStuBtn" runat="server" Text="Update Student" />
@@ -76,6 +72,18 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label13" runat="server" Font-Bold="True" Font-Size="Large" Text="Enter Student Attendance Below"></asp:Label>
         <br />
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Student Roll Number"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="rollNoTbox" runat="server" Width="140px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label14" runat="server" Text="Subject Code"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="subCodeTBox" runat="server" Width="248px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label15" runat="server" Text="Instructor ID"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="instIDTBox" runat="server" Width="121px"></asp:TextBox>
         <br />
         <br />
         <asp:Label ID="Label12" runat="server" Text="Date"></asp:Label>
@@ -93,7 +101,7 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="saveAttBtn" runat="server" Text="Save Attendance" />
+        <asp:Button ID="saveAttBtn" runat="server" OnClick="saveAttBtn_Click" Text="Save Attendance" />
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="updAttBtn" runat="server" Text="Update Attendance" />
 &nbsp;&nbsp;&nbsp;&nbsp;

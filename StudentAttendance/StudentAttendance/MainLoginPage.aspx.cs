@@ -23,18 +23,62 @@ namespace StudentAttendance
         
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            cmd.Connection = cn;
         }
 
         protected void loginBtn_Click(object sender, EventArgs e)
         {
             if (iuNmTBox.Text != "" & staffpwdTBox.Text != "")
             {
-                //cn.Open();
-                //cmd = new SqlCommand("SELECT * FROM LoginTable WHERE Name= '" + iuNmTBox.Text + "' and Password= '" + staffpwdTBox.Text + "')", cn); 
-                //dr = cmd.ExecuteReader(); 
                 Response.Redirect("InstStudInfoPage.aspx");
             }
+            /*cn.Open();
+            cmd.Connection = cn;
+            cmd.CommandText = "SELECT * FROM LoginTable WHERE Name= '" + iuNmTBox.Text + "' AND Password = '"+ staffpwdTBox.Text+"'";
+            dr = cmd.ExecuteReader();
+            dr.Read();
+            if (dr.HasRows)
+            {
+                Session["iuName"] = iuNmTBox.Text;
+                Response.Redirect("InstStudInfoPage");
+            }
+            else
+            {
+                Response.Write("Login not correct, please try again... ");
+            }
+            cn.Close(); */
+
+            /*try
+            { 
+                string iuName = iuNmTBox.Text;
+                string staffPassword = staffpwdTBox.Text;
+
+                cmd = new SqlCommand("SELECT ISNULL (Name, ' ') AS Name, ISNULL (Password, ' ') AS Password FROM LoginTable WHERE Name= @Name and Password = @Password", cn); // '" + iuNmTBox.Text + "' and Password= '" + staffpwdTBox.Text + "'";
+                cmd.Parameters.Add(new SqlParameter("Name", iuName));
+                cmd.Parameters.Add(new SqlParameter("Password", staffPassword));
+                dr = cmd.ExecuteReader(); 
+
+                try 
+                {
+                    dr.Read();
+                    if (dr.["Name"].ToString().Trim() == iuName && dr["Password"].ToString().Trim() == staffPassword)
+                    {
+                        
+                    }
+                }
+                catch
+                {
+
+                }
+                dr.Close();
+                cn.Close();
+                
+                Response.Redirect("InstStudInfoPage.aspx");
+            }
+            finally
+            {
+                //Response.Redirect.("InstStudInfoPage.aspx");
+            }*/
         }
 
         protected void regBtn_Click(object sender, EventArgs e)
