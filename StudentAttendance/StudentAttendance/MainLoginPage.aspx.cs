@@ -30,11 +30,19 @@ namespace StudentAttendance
         {
             if (iuNmTBox.Text != "" & staffpwdTBox.Text != "")
             {
-                cn.Open();
-                cmd = new SqlCommand("SELECT * FROM LoginTable WHERE Name= '" + iuNmTBox.Text + "' and Password= '" + staffpwdTBox.Text + "')", cn); 
-                dr = cmd.ExecuteReader(); 
+                //cn.Open();
+                //cmd = new SqlCommand("SELECT * FROM LoginTable WHERE Name= '" + iuNmTBox.Text + "' and Password= '" + staffpwdTBox.Text + "')", cn); 
+                //dr = cmd.ExecuteReader(); 
                 Response.Redirect("InstStudInfoPage.aspx");
             }
         }
+
+        protected void regBtn_Click(object sender, EventArgs e)
+        {
+            if (iuNmTBox.Text != "" & staffpwdTBox.Text != "")
+            {
+                Response.Redirect("AdminPage.aspx");
+            }
+        }
     }
-}
+} 

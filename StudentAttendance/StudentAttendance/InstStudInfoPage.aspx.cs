@@ -13,5 +13,10 @@ namespace StudentAttendance
         {
 
         }
+
+        protected void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MainLoginPage.aspx");
+        }
     }
 }
