@@ -18,14 +18,15 @@ namespace StudentAttendance
     public partial class MainLoginPage : System.Web.UI.Page
     {
         SqlConnection cn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\taryn\Documents\Visual Studio 2015\Projects\final-project-\StudentAttendance\StudentAttendance\App_Data\Database1.mdf;Integrated Security = True");
-        SqlCommand cmd;
+        SqlCommand cmd = new SqlCommand();
         SqlDataReader dr;
         
         protected void Page_Load(object sender, EventArgs e)
         {
             cmd.Connection = cn;
         }
-
+                
+        //Login Button Needs to Validate Credentials in LoginTable 
         protected void loginBtn_Click(object sender, EventArgs e)
         {
             if (iuNmTBox.Text != "" & staffpwdTBox.Text != "")
@@ -81,12 +82,10 @@ namespace StudentAttendance
             }*/
         }
 
+        //Register Button Routes to Admin Page 
         protected void regBtn_Click(object sender, EventArgs e)
         {
-            if (iuNmTBox.Text != "" & staffpwdTBox.Text != "")
-            {
-                Response.Redirect("AdminPage.aspx");
-            }
+            Response.Redirect("AdminPage.aspx");
         }
     }
 } 

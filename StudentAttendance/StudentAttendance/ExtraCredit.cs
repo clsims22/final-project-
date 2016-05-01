@@ -48,8 +48,12 @@ namespace StudentAttendance
 
         public void Calculate()
         {
-            /*http://forums.asp.net/t/1904370.aspx?How+to+calculate+attendance+percentage+ */
+            
+        }
 
+        private void fnPercent()
+        {
+            throw new NotImplementedException();
         }
     }
 } 
